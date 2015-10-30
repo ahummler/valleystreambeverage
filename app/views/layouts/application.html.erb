@@ -11,10 +11,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1> Tell Friends and Family VSBC!!</h1>
+<h1> VSBC</h1>
+<div class="presets">
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+				</div>
 <%= yield %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <div class="presets">
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+					<div><%= link_to '', root_path %></div>
+				</div>
 </body>
 </html>

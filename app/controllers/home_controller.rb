@@ -12,6 +12,7 @@ class HomeController < ApplicationController
   end
 
   def order
+    @order = Order.new
   end
 
   def FAQ
