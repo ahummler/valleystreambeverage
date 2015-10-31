@@ -1,3 +1,13 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 {    font-size: 4rem;}h2 {    font-size: golden-ratio(4rem, -1);}h3 {    font-size: golden-ratio(4rem, -2);}
+section  {
+  @include linear-gradient(to top, red, orange);
+
+}
+
+.faq
+	{font-family: $helvetica;}
+
+#logo {float: left; padding: 1em;}
+.about {font-family: $helvetica; font-size: 2rem;}

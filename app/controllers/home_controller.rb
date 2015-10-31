@@ -17,4 +17,13 @@ class HomeController < ApplicationController
 
   def FAQ
   end
+  def new
+    @request = Request.new
+    respond_to do |format|
+      format.html
+      format.js  
+  end
+end
+
+
 end

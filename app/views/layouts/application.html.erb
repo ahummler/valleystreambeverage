@@ -11,12 +11,47 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1> VSBC</h1>
+<header><%= image_tag "beerback.jpeg", width: "100%" %>
+<div id="beermenu">
+	<a target="_blank" href="https://www.beermenus.com/places/5375-valley-stream-discount-beverage-center"><%= image_tag "beermenu.png", width: "100px" %></a>
+</div>
+<div id="facebook">
+
+<a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag "facebook.jpeg", width: "100px" %><br>Follow us</a>
+</div>
+<div class="beerlogos">
+		<%= image_tag "amstel.jpeg", width: "50px" %>
+		<%= image_tag "bluemoon.jpeg", width: "50px" %>
+		<%= image_tag "brooklyn.jpeg", width: "50px" %>
+		<%= image_tag "budlt.jpeg", width: "50px" %>
+		<%= image_tag "bud.jpg", width: "50px" %>
+		<%= image_tag "coorslt.jpeg", width: "50px" %>
+		<%= image_tag "foster.jpeg", width: "50px" %>
+		<%= image_tag "weihenstephan.jpeg", width: "50px" %>
+		<%= image_tag "samadams.jpeg", width: "50px" %>
+		<%= image_tag "miller.jpeg", width: "50px" %>
+		<%= image_tag "stella.png", width: "50px" %>
+		<%= image_tag "corona.png", width: "50px" %>
+		<%= image_tag "guinness.png", width: "50px" %>
+		<%= image_tag "newcastle.jpeg", width: "50px" %>
+		<%= image_tag "pbr.jpeg", width: "50px" %>
+		<%= image_tag "redstripe.jpeg", width: "50px" %>
+		<%= image_tag "peroni.jpeg", width: "50px" %>
+		<%= image_tag "carib.jpeg", width: "50px" %>
+		<%= image_tag "banks.jpeg", width: "50px" %>
+		<%= image_tag "guinblonde.jpeg", width: "50px" %>
+		<%= image_tag "rollingrock.jpeg", width: "50px" %>
+		<%= image_tag "anchor.jpeg", width: "50px" %>
+		<%= image_tag "becks.jpeg", width: "50px" %>
+		<%= image_tag "grolsch.jpeg", width: "50px" %>
+	
+</div>
+</header>
 <div class="presets">
-					<div><%= link_to '', root_path %></div>
-					<div><%= link_to '', root_path %></div>
-					<div><%= link_to '', root_path %></div>
-					<div><%= link_to '', root_path %></div>
+					<div><%= link_to 'about', root_path %></div>
+					<div><%= link_to 'specials', home_specials_path %></div>
+					<div><%= link_to 'contact', home_contact_path %></div>
+					<div><%= link_to 'faq', home_faq_path %></div>
 				</div>
 <%= yield %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

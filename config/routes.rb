@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/new'
   get 'home/about'
 
   get 'home/products'
@@ -9,9 +10,9 @@ Rails.application.routes.draw do
 
   get 'home/order'
 
-  get 'home/FAQ'
-   
-  root 'home#index'
+  get 'home/faq'
+ 
+  root 'home#about'
   devise_for :users
   
 end
