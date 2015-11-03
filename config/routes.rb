@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'home/order'
 
   get 'home/faq'
- 
+  get 'home/corporate'
   root 'home#about'
   devise_for :users
   

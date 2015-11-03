@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  taxid: MyString
+  companyname: MyString
+  address: MyString
+  owner: MyString
+
+two:
+  taxid: MyString
+  companyname: MyString
+  address: MyString
+  owner: MyString

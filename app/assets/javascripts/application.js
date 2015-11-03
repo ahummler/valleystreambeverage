@@ -72,6 +72,42 @@ $(document).on('page:change', function() {
    });
   });
  });
+});
+	});
+// $(document).on('page:change', function() {
+// 	$( "#heinbtl" ).click(function() {
+// 	  $( "#hb" ).animate({
+// 	    opacity: 0.25,
+// 	    left: "+=50",
+// 	    height: "toggle"
+// 	  }, 5000, function() {
+// 	    // Animation complete.
+// 	  });
+// 	});
+// });
+$(document).on('page:change', function() {
+	$( "#coronabtl" ).click(function() {
+	  $( "#cb" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+	    // Animation complete.
+	  });
+	});
+});
+$(document).on('page:change', function() {
+	$( "#ashpic" ).click(function() {
+	  $( "#ash" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+	    // Animation complete.
+	  });
+	});
+});
+// $(document).on('page:change', function()
 //   var menuToggle = $('#js-mobile-menu').unbind();
 //   $('#js-navigation-menu').removeClass("show");
 
@@ -83,4 +119,7 @@ $(document).on('page:change', function() {
 //       }
 //     });
 //   });
-});
+// });
+
+
+
