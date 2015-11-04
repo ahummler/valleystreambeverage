@@ -1,0 +1,24 @@
+<div id="corp app">
+<%= form_for home_corporate_path, remote: true, :authenticity_token => true do |f| %>
+
+<p class='corp'>
+		<%= f.label :tax_id_number %>
+		<%= f.text_field :taxid %>
+	</p>
+	
+	<p class='corp'>
+		<%= f.label :company_name %>
+		<%= f.text_field :companyname %>
+	</p>
+	<p class='corp'>
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+		</p>
+
+	<p class='corp'>
+		<%= f.label :owner %>
+		<%= f.text_field :owner %>
+</p>
+		<p class='corp'><%= f.submit 'Create', class: 'post_submit', data: {disable_with: "Submitting..."} %></p>
+<% end %>
+</div>

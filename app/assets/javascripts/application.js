@@ -20,18 +20,7 @@ $(document).on('page:change', function() {
     	$(this).toggleClass("expander-hidden");
     });
 });
-//changed to class not 
-// $(document).on('page:change', function() {
-// 	$( "#heinbtl" ).click(function() {
-// 	  $( "#hb" ).animate({
-// 	    opacity: 0.25,
-// 	    left: "+=50",
-// 	    height: "toggle"
-// 	  }, 5000, function() {
-// 	    // Animation complete.
-// 	  });
-// 	});
-// });
+
 $(document).on('page:change', function() {
 	$( "#coronabtl" ).click(function() {
 	  $( "#cb" ).animate({

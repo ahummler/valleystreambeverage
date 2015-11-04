@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'home/new'
+  get 'home/keg'
   get 'home/about'
 
   get 'home/products'
