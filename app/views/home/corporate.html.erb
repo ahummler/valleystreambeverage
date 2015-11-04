@@ -3,12 +3,12 @@
 <%= form_for home_corporate_path, remote: true, :authenticity_token => true do |f| %>
 
 <p class='corp'>
-		<%= f.label :taxid %>
+		<%= f.label :tax_id_number %>
 		<%= f.text_field :taxid %>
 	</p>
 	
 	<p class='corp'>
-		<%= f.label :companyname %>
+		<%= f.label :company_name %>
 		<%= f.text_field :companyname %>
 	</p>
 	<p class='corp'>
