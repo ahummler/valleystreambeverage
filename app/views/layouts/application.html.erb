@@ -13,17 +13,26 @@
 </head>
 <body>
 <container>
-<%= image_tag "beerback.jpeg", height: "150px" , width: "100%" %>	
-
 <header class="navigation" role="banner">
+  <div id="beermenu">
+    <a target="_blank" href="https://www.beermenus.com/places/5375-valley-stream-discount-beverage-center"><%= image_tag "beermenu.png", :id =>"fb
+    ", width: "100px" %></a>
+  </div>
+  <div id="facebook">
+    <a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag("facebook.jpeg", :id=>"fb", width: "100px") %>
+  </div>
+  <%= image_tag "beerback3.jpeg", height: "150px" , width: "100%" %>  
+
+
   <div class="navigation-wrapper">
     <a href="javascript:void(0)" class="logo">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
+      <%= image_tag("vsbcstore.jpg", :id =>"vsbc", :size =>"20%") %>
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><%= link_to 'About', root_path %></li>
+        <li class="nav-link"><%= link_to 'Home', root_path %></li>
+        <li class="nav-link"><%= link_to 'About', home_about_path %></li>
         <li class="nav-link"><%= link_to 'Specials', home_specials_path %>></li>
         <li class="nav-link"><%= link_to 'Contact', home_contact_path %></li>
         <li class="nav-link"><%= link_to 'Faq', home_faq_path %></li>
@@ -41,50 +50,50 @@
     </div>
   </div>
 </header>
-<div id="beermenu">
-	<a target="_blank" href="https://www.beermenus.com/places/5375-valley-stream-discount-beverage-center"><%= image_tag "beermenu.png", :id =>"fb
-	", width: "100px" %></a>
-</div>
-<div id="facebook">
 
-<a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag("facebook.jpeg", :id=>"fb", width: "100px") %><br>Follow us</a>
-</div>
 
-<div class="beerlogos">
-		<%= image_tag "amstel.jpeg", width: "50px" %>
-		<%= image_tag "bluemoon.jpeg", width: "50px" %>
-		<%= image_tag "brooklyn.jpeg", width: "50px" %>
-		<%= image_tag "budlt.jpeg", width: "50px" %>
-		<%= image_tag "bud.jpg", width: "50px" %>
-		<%= image_tag "coorslt.jpeg", width: "50px" %>
-		<%= image_tag "foster.jpeg", width: "50px" %>
-		<%= image_tag "weihenstephan.jpeg", width: "50px" %>
-		<%= image_tag "samadams.jpeg", width: "50px" %>
-		<%= image_tag "miller.jpeg", width: "50px" %>
-		<%= image_tag "stella.png", width: "50px" %>
-		<%= image_tag "corona.png", width: "50px" %>
-		<%= image_tag "guinness.png", width: "50px" %>
-		<%= image_tag "newcastle.jpeg", width: "50px" %>
-		<%= image_tag "pbr.jpeg", width: "50px" %>
-		<%= image_tag "redstripe.jpeg", width: "50px" %>
-		<%= image_tag "peroni.jpeg", width: "50px" %>
-		<%= image_tag "carib.jpeg", width: "50px" %>
-		<%= image_tag "banks.jpeg", width: "50px" %>
-		<%= image_tag "guinblonde.jpeg", width: "50px" %>
-		<%= image_tag "rollingrock.jpeg", width: "50px" %>
-		<%= image_tag "anchor.jpeg", width: "50px" %>
-		<%= image_tag "becks.jpeg", width: "50px" %>
-		<%= image_tag "grolsch.jpeg", width: "50px" %>
-	
-</div>
 </container>
-
+</div>
+<div id="vslogo">
+<%= image_tag("vslogo.jpg", :id =>"vs", :size =>"300%") %>
+</div>
 <%= yield %>
+
 <div id="ashpic">
 <%= image_tag("ashton.jpg", :id =>"ash", :size =>"25%") %>
 </div>
 
 
+<footer class="footer" role="contentinfo">
+  <div class="footer-logo">
+    <%= image_tag("vslogo.jpg", :id =>"vs", :size =>"300%") %>
+  </div>
+  <div class="footer-links">
+    <ul>
+      <li><h3>Content</h3></li>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/home/about">About</a></li>
+      <li><a href="/home/contact">Contact</a></li>
+      <li><a href="/home/products">Products</a></li> 
+      <li><a href="/home/faq">FAQ</a></li>
+      <li><%= link_to 'Specials', home_specials_path %></li>
+    </ul>
+    <ul>
+      <li><h3>Follow Us</h3></li>
+      <li><a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts">Facebook</a></li>
+      <li><a target="_blank" href="https://www.beermenus.com/places/5375-valley-stream-discount-beverage-center">Beer Menus</a></li>
+     </ul>
+    <ul>
+      <li><h3>Legal</h3></li>
+      <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+      <li><a href="javascript:void(0)">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <p>Disclaimer Please imbibe responsibly. Cheers!</p>
+</footer>
 			
 </body>
 </html>

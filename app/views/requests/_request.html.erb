@@ -1,0 +1,17 @@
+<div class="request">
+<%= form_for @request, :html => { :multipart => true } do |f| %> 
+<p>
+		<%= f.label  :fname, "NAME" %>
+		<%= f.text_field :fname, placeholder: "Your Name" %>
+		<%= f.label  :bname, "Type of beer" %>
+		<%= f.text_field :bname, placeholder: "Type of beer" %>
+</p>
+<p>
+		<%= f.label :email, "Email"  %>
+		<%= f.email_field :email, placeholder:"Email", required: true %>
+</p>
+<p>
+		<%= f.submit %>
+</p>
+  <% end %>
+</div>
