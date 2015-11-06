@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'home/keg'
   get 'home/about'
  
-
+  post 'home/email'
   get 'home/products'
 
   get 'home/specials'

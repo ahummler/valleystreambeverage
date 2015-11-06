@@ -1,6 +1,28 @@
 <div class="contact">
 <h1>Contact Us</h1>
-<%= render 'email' %>
-</div>
+<p>
+	<%= form_tag home_email_path, method: :post do  %> 
+
+<p class="contact">
+<%= label_tag  :name, "name" %>
+<%= text_field_tag :name, nil, :placeholder=>"name" %>
+</p>
+<p class="contact">
+<%= label_tag :email, "Email" %>
+<%= email_field_tag :email, nil, :placeholder=>"Email" %>
+</p>
+<p class="contact">
+<%= label :comments, "Comments" %>
+<%= text_area_tag :comments, nil, placeholder:"Comments" %>
+</p>
+<p class="contact">
+<%= label_tag :phone, "Phone" %>
+<%= text_field_tag :phone, nil,  placeholder:"Phone" %>
+</p>
+
+	<p class='contact'><%= submit_tag 'submit', class: 'email_submit', data: {disable_with: "Submitting..."} %></p>
+<% end %>
+</p>
+
 
 
