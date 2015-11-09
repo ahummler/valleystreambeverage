@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :corporates
+  resources :corporates do
+    collection { post :import}
+  end
+  
   resources :requests
 
   get 'home/new'

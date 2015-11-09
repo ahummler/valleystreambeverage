@@ -1,9 +1,10 @@
 
 
 h1 {    font-size: 4rem;}h2 {    font-size: golden-ratio(4rem, -1);}
-h3 {    font-size: golden-ratio(4rem, -2); display: inline-block}
+h3 {    font-size: golden-ratio(4rem, -2); display: inline-block;}
 section  {
   @include linear-gradient(to top, red, orange);
+            tint: 40%;
 
 }
 
@@ -433,14 +434,43 @@ header.navigation {
   top: 15px;
   left: 15px;
 }
+ .beerback {
 
+    height: 275px;
+    background-image: url("beer.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 #beermenu {
   position: absolute;
   top: 15px;
   right: 15px;
 }
+.productbkg {
 
+    height: 250px;
+    background-image: url("craftfight.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+.productbkg2 {
 
+    height: 330px;
+    background-image: url("craftbeer.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+.productbkg3 {
+
+    height: 330px;
+    background-image: url("assorted.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
 // #vslogo {margin: 0 auto;}
 div#vslogo {
     margin-left: auto;
@@ -587,6 +617,47 @@ div#vslogo {
   }
 
   @include reset-display();
+}
+//flash notice code
+$base-spacing: 1.5em !default;
+$alert-color: #fff6bf !default;
+$error-color: #fbe3e4 !default;
+$notice-color: #e5edf8 !default;
+$success-color: #e6efc2 !default;
+
+@mixin flash($color) {
+  background-color: $color;
+  color: darken($color, 60%);
+  display: block;
+  margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 2;
+  text-align: center;
+
+  a {
+    color: darken($color, 70%);
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      color: darken($color, 90%);
+    }
+  }
+}
+
+.flash-alert {
+  @include flash($alert-color);
+}
+
+.flash-error {
+  @include flash($error-color);
+}
+
+.flash-notice {
+  @include flash($notice-color);
+}
+
+.flash-success {
+  @include flash($success-color);
 }
 
 

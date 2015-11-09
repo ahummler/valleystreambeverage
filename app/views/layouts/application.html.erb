@@ -13,6 +13,9 @@
 </head>
 <body>
 <container>
+  <div class="beerback">
+  
+  </div> 
 <header class="navigation" role="banner">
   <div id="beermenu">
     <a target="_blank" href="https://www.beermenus.com/places/5375-valley-stream-discount-beverage-center"><%= image_tag "beermenu.png", :id =>"fb
@@ -21,7 +24,7 @@
   <div id="facebook">
     <a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag("facebook.jpeg", :id=>"fb", width: "100px") %>
   </div>
-  <%= image_tag "craftmenu.jpeg", height: "150px" , width: "100%" %>  
+
 
 
   <div class="navigation-wrapper">
@@ -33,7 +36,7 @@
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><%= link_to 'Home', root_path %></li>
         <li class="nav-link"><%= link_to 'About', home_about_path %></li>
-        <li class="nav-link"><%= link_to 'Specials', home_specials_path %>></li>
+        <li class="nav-link"><%= link_to 'Specials', home_specials_path %></li>
         <li class="nav-link"><%= link_to 'Contact', home_contact_path %></li>
         <li class="nav-link"><%= link_to 'Faq', home_faq_path %></li>
         <li class="nav-link"><%= link_to 'Products', home_products_path %></li>
@@ -50,6 +53,12 @@
     </div>
   </div>
 </header>
+<% if flash[:notice] %>
+      <div class="flash-notice"><span><%= flash[:notice] %></span></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="flash-alert"><%= flash[:alert] %></div>
+    <% end %>
 
 
 </container>
@@ -59,9 +68,10 @@
 </div>
 <%= yield %>
 
-<div id="ashpic">
+
+<!-- <div id="ashpic">
 <%= image_tag("ashton.jpg", :id =>"ash", :size =>"25%") %>
-</div>
+</div> -->
 
 
 <footer class="footer" role="contentinfo">

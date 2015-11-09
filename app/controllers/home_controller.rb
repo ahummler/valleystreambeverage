@@ -44,7 +44,7 @@ class HomeController < ApplicationController
     }  
     sending = m.messages.send message  
     puts sending
-    redirect_to root_path, notice: "Thanks"
+    redirect_to home_contact_path, notice: "Thanks for contacting us #{sender}"
   end
 
 end

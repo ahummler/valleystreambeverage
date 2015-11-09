@@ -1,1 +1,7 @@
 <h1>Index</h1>
+<h2>Import Products</h2>
+
+<%= form_tag import_corporates_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>

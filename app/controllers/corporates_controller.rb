@@ -11,7 +11,10 @@ class CorporatesController < ApplicationController
   
     
   end
-
+  def import
+  Corporate.import(params[:file])
+  redirect_to root_url, notice: "Products imported."
+  end
 
   def create
 	 @corp = Corporate.new(corp_params)
