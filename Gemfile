@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'bourbon', '~> 4.2', '>= 4.2.6'
 gem 'refills'
+gem 'neat', '~> 1.7', '>= 1.7.2'
 gem 'mandrill-api'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

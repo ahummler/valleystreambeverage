@@ -1,5 +1,15 @@
+section {
+  @include outer-container;
+  aside { @include span-columns(3); }
+  article { @include span-columns(9); }
+}
 
+#content {
+                margin: 25px 25px 25px 25px;
+                border: 1px solid red;
+            }
 
+            
 h1 {    font-size: 4rem;}h2 {    font-size: golden-ratio(4rem, -1);}
 h3 {    font-size: golden-ratio(4rem, -2); display: inline-block;}
 section  {
@@ -12,7 +22,7 @@ section  {
 	{font-family: $helvetica;}
 
 #logo {float: left; padding: 1em;}
-.about {font-family: $helvetica; font-size: 2rem;}
+.about {font-family: $helvetica; font-size: 1.75em;}
 
 .expander {  
   $base-font-size: 1em !default;
@@ -475,7 +485,15 @@ header.navigation {
 div#vslogo {
     margin-left: auto;
     margin-right: auto;
-    width: 10em;}
+    width: 10em;
+  }
+
+  //   div#gmap {
+  //   float: right;
+  // }
+  // #cheers {height: 310px;
+  //          float: left;
+  //        }
     //footer code//
     .footer {
   $base-spacing: 1.5em !default;

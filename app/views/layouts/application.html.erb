@@ -12,6 +12,9 @@
   
 </head>
 <body>
+<section>
+
+
 <container>
   <div class="beerback">
   
@@ -22,7 +25,7 @@
     ", width: "100px" %></a>
   </div>
   <div id="facebook">
-    <a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag("facebook.jpeg", :id=>"fb", width: "100px") %>
+    <a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag("facebook.jpeg", :id=>"fb", width: "100px") %></a>
   </div>
 
 
@@ -40,7 +43,9 @@
         <li class="nav-link"><%= link_to 'Contact', home_contact_path %></li>
         <li class="nav-link"><%= link_to 'Faq', home_faq_path %></li>
         <li class="nav-link"><%= link_to 'Products', home_products_path %></li>
+        </ul>
   </nav>
+
     <!-- div class="navigation-tools">
       <div class="search-bar">
         <form role="search">
@@ -53,6 +58,7 @@
     </div>
   </div>
 </header>
+  <div id="content">
 <% if flash[:notice] %>
       <div class="flash-notice"><span><%= flash[:notice] %></span></div>
     <% end %>
@@ -61,7 +67,7 @@
     <% end %>
 
 
-</container>
+
 </div>
 <div id="vslogo">
 <%= image_tag("vslogo.jpg", :id =>"vs", :size =>"300%") %>
@@ -69,9 +75,6 @@
 <%= yield %>
 
 
-<!-- <div id="ashpic">
-<%= image_tag("ashton.jpg", :id =>"ash", :size =>"25%") %>
-</div> -->
 
 
 <footer class="footer" role="contentinfo">
@@ -104,6 +107,7 @@
 
   <p>Disclaimer Please imbibe responsibly. Cheers!</p>
 </footer>
-			
+</container>
+</section>
 </body>
 </html>
