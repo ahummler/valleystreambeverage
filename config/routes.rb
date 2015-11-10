@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'products/index'
+
+  get 'products/import'
+
+  get 'products/order'
+
+  get 'products/home'
+
   resources :corporates do
     collection { post :import}
   end
@@ -23,5 +31,10 @@ Rails.application.routes.draw do
   # post 'home/corporate', to: 'home#corp_create', as: 'corp_create'
   root 'home#home'
   devise_for :users
+  
+  resources :products do
+    collection { post :import}
+  end
+
   
 end
