@@ -13,9 +13,9 @@ section {
 h1 {    font-size: 4rem;}h2 {    font-size: golden-ratio(4rem, -1);}
 h3 {    font-size: golden-ratio(4rem, -2); display: inline-block;}
 section  {
-  @include linear-gradient(to top, red, orange);
-            tint: 40%;
-
+  @include linear-gradient(red, orange);
+            tint: 60%;
+            
 }
 
 .faq

@@ -1,18 +1,9 @@
 Rails.application.routes.draw do
-  get 'products/index'
+  post 'corporate/email', to: 'corporates#email'
 
-  get 'products/import'
-
-  get 'products/order'
-
-  get 'products/home'
-
-  resources :corporates do
-    collection { post :import}
-  end
-  
+  resources :corporates 
+  post 'request/email', to: 'requests#email'
   resources :requests
-
   get 'home/new'
   get 'home/keg'
   get 'home/about'
@@ -31,9 +22,9 @@ Rails.application.routes.draw do
   # post 'home/corporate', to: 'home#corp_create', as: 'corp_create'
   root 'home#home'
   devise_for :users
-  
+
   resources :products do
-    collection { post :import}
+  collection { post :import}
   end
 
   

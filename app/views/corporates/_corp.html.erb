@@ -1,24 +1,28 @@
 <div id="corp app">
-<%= form_for @corp do |f| %>
-
+<%= form_tag corporate_email_path do |f| %>
 <p class='corp'>
-		<%= f.label :tax_id_number %>
-		<%= f.text_field :taxid %>
-	</p>
+		<%= label_tag :email %>
+		<%= text_field_tag :email %>
+		</p>
+<p class='corp'>
+		<%= label_tag :tax_id_number %>
+		<%= text_field_tag :taxid %>
+		</p>
 	
 	<p class='corp'>
-		<%= f.label :company_name %>
-		<%= f.text_field :companyname %>
+		<%= label_tag :company_name %>
+		<%= text_field_tag :companyname %>
 	</p>
 	<p class='corp'>
-		<%= f.label :address %>
-		<%= f.text_field :address %>
+		<%= label_tag :address %>
+		<%= text_field_tag :address %>
 		</p>
 
 	<p class='corp'>
-		<%= f.label :owner %>
-		<%= f.text_field :owner %>
+		<%= label_tag :owner %>
+		<%= text_field_tag :owner %>
 </p>
-		<p class='corp'><%= f.submit 'Create', class: 'post_submit', data: {disable_with: "Submitting..."} %></p>
+		<p class='contact'><%= submit_tag 'submit', class: 'corporate_submit', data: {disable_with: "Submitting..."} %></p>
+
 <% end %>
 </div>

@@ -1,17 +1,20 @@
 <div class="request">
-<%= form_for @request, :html => { :multipart => true } do |f| %> 
+<%= form_tag request_email_path do |f| %> 
 <p>
-		<%= f.label  :fname, "NAME" %>
-		<%= f.text_field :fname, placeholder: "Your Name" %>
-		<%= f.label  :bname, "Type of beer" %>
-		<%= f.text_field :bname, placeholder: "Type of beer" %>
+		<%= label_tag  :fname, "NAME" %>
+		<%= text_field_tag :fname %>
+</p>
+<p>		
+		<%= label_tag  :bname, "Type of beer" %>
+		<%= text_field_tag :bname %>
 </p>
 <p>
-		<%= f.label :email, "Email"  %>
-		<%= f.email_field :email, placeholder:"Email", required: true %>
+		<%= label_tag :email, "Email"  %>
+		<%= email_field_tag :email %>
 </p>
-<p>
-		<%= f.submit %>
-</p>
+
+		<p class='contact'><%= submit_tag 'submit', class: 'request_submit', data: {disable_with: "Submitting..."} %>
+		</p>
+
   <% end %>
 </div>
