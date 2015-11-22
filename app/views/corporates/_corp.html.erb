@@ -1,0 +1,28 @@
+<div id="corpapp">
+<%= form_tag corporate_email_path do |f| %>
+<p class='corp'>
+		<%= label_tag :email %>
+		<%= text_field_tag :email %>
+		</p>
+<p class='corp'>
+		<%= label_tag :tax_id_number %>
+		<%= text_field_tag :taxid %>
+		</p>
+	
+	<p class='corp'>
+		<%= label_tag :company_name %>
+		<%= text_field_tag :companyname %>
+	</p>
+	<p class='corp'>
+		<%= label_tag :address %>
+		<%= text_field_tag :address %>
+		</p>
+
+	<p class='corp'>
+		<%= label_tag :owner %>
+		<%= text_field_tag :owner %>
+</p>
+</div>
+		<p class='submit'><%= submit_tag 'submit', class: 'corporate_submit', data: {disable_with: "Submitting..."} %></p>
+
+<% end %>

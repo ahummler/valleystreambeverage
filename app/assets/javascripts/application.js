@@ -14,3 +14,88 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('page:change', function() {
+    $('.expander-trigger').click(function() {
+    	$(this).toggleClass("expander-hidden");
+    });
+});
+$(document).on('page:change', function() {
+	$( "#heinbtl" ).click(function() {
+	  $( "#hb" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+	    // Animation complete.
+	  });
+	});
+});
+$(document).on('page:change', function() {
+	$( "#coronabtl" ).click(function() {
+	  $( "#cb" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+	    // Animation complete.
+	  });
+	});
+});
+$(document).on('page:change', function() {
+	$( "#ashpic" ).click(function() {
+	  $( "#ash" ).animate({
+	    opacity: 0.25,
+	    left: "+=50",
+	    height: "toggle"
+	  }, 5000, function() {
+	    // Animation complete.
+	  });
+	});
+});
+$(document).ready(function(){
+
+	$("#cheers").css("opacity", 0);
+
+	$(window).scroll(function(){
+
+		var windowHeight = $(window).height();
+		var windowScrollPosTop = $(window).scrollTop();
+		var windowScrollPosBottom= windowHeight +
+		windowScrollPosTop;
+		var objectOffset = $("#cheers").offset();
+		var objectOffsetTop = objectOffset.top;
+
+		
+		if (!$("cheers").hasClass("animation-complete")){
+
+			if(windowScrollPosBottom > objectOffsetTop){
+			$("#cheers").animate({"opacity" : 1},
+			 3000).addClass("animation-complete");
+		}
+		}
+	
+
+});
+});
+$(document).ready(function(){
+	$(".beerlogos").css({'position':'absolute'})
+	$(".beerlogos").animate({'left':'3000px'},60000, 'linear')
+	
+});
+// $(document).on('page:change', function()
+//   var menuToggle = $('#js-mobile-menu').unbind();
+//   $('#js-navigation-menu').removeClass("show");
+
+//   menuToggle.on('click', function(e) {
+//     e.preventDefault();
+//     $('#js-navigation-menu').slideToggle(function(){
+//       if($('#js-navigation-menu').is(':hidden')) {
+//         $('#js-navigation-menu').removeAttr('style');
+//       }
+//     });
+//   });
+// });
+
+
+

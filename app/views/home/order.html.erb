@@ -1,2 +1,32 @@
-<h1>Home#order</h1>
-<p>Find me in app/views/home/order.html.erb</p>
+<h1>Place an order</h1>
+
+<%= form_for @order, remote: true, :authenticity_token => true do |f| %> 
+
+<p>
+<%= f.label  :beer, "beer" %>
+<%= f.text_field :beer, placeholder:"beer" %>
+</p>
+<p>
+<%= f.label :web_url, "quantity" %>
+<%= f.text_field :web_url, placeholder:"quantity" %>
+</p>
+<p>
+<%= f.label :softdrink, "soda/juice" %>
+<%= f.text_field :softdrink,  placeholder:"soda/juice" %>
+</p>
+<p>
+<%= f.label :ice, "Ice" %>
+<%= f.text_field :ice, placeholder:"Ice" %>
+</p>
+<p>
+<%= f.label :phone, "Phone" %>
+<%= f.text_field :phone,  placeholder:"Phone" %>
+</p>
+<p>
+<%= f.label :email, "Email" %>
+<%= f.email_field :email, placeholder:"Email" %>
+</p>
+<p>
+		<%= f.submit %>
+	</p>
+<% end %>

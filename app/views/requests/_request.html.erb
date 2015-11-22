@@ -1,0 +1,19 @@
+<div class="request">
+<%= form_tag request_email_path do |f| %> 
+<p>
+		<%= label_tag  :fname, "NAME" %>
+		<%= text_field_tag :fname %>
+</p>
+<p>		
+		<%= label_tag  :bname, "Type of beer" %>
+		<%= text_field_tag :bname %>
+</p>
+<p>
+		<%= label_tag :email, "Email"  %>
+		<%= email_field_tag :email %>
+</p>
+</div>
+		<p class='submit'><%= submit_tag 'submit', class: 'request_submit', data: {disable_with: "Submitting..."} %>
+		</p>
+
+  <% end %>
