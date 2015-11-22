@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'home/order'
 
-  get 'home/faq'
+  get 'home/FAQ'
   # get 'home/corporate', to: 'home#corp', as: 'corp'
   # post 'home/corporate', to: 'home#corp_create', as: 'corp_create'
   root 'home#home'
