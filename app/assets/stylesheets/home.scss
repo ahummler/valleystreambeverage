@@ -6,17 +6,50 @@ section {
 
 #content {
                 margin: 25px 25px 25px 25px;
-                border: 1px solid red;
+                border: 1px solid #FFF6BF ;
             }
+#tel {color: #f2f20d;}
 
+.aboutpadding {padding: 1.5rem;}
+// #aboutanimate { 
+//                 position: fixed;
+//                 top: 315px; 
+//                 left: 15px;}
+.corpacct {padding: 1.5rem;}
             
-h1 {    font-size: 4rem;}h2 {    font-size: golden-ratio(4rem, -1);}
+h1 {    font-size: 4rem; padding: 1.5rem;}h2 {    font-size: golden-ratio(4rem, -1);}
 h3 {    font-size: golden-ratio(4rem, -2); display: inline-block;}
 section  {
-  @include linear-gradient(red, orange);
-            tint: 60%;
+  @include linear-gradient( to top, white, #004C55)
+                          // (to top, red, orange) possible color
+                            // other possible color
+           // (to top, #00FF00, #003333)
+           //004c55
             
 }
+
+#suggestion{ padding: 1.5rem;}
+#productlink {color: black; padding: 1.5rem;}
+.sp { padding: 1.5rem;}
+.wholesale {padding: 1.5rem;}
+.corp    {width: 30em;
+           input {background-color: #FFF6BF;
+
+            
+          }
+
+        }
+.contact {width: 30em;
+           textarea {background-color: #FFF6BF;}
+           input {background-color: #FFF6BF;
+            
+          }
+        }
+.request {width: 30em; padding: 1.5rem;
+           input {background-color: #FFF6BF;
+            
+          }
+        }
 
 .faq
 	{font-family: $helvetica;}
@@ -346,69 +379,71 @@ header.navigation {
       float: right;
     }
   }
+}
 
   // Search bar
 
-  .search-bar {
-    $search-bar-border-color: $base-border-color;
-    $search-bar-border: 1px solid $search-bar-border-color;
-    $search-bar-background: lighten($search-bar-border-color, 10%);
+  // .search-bar {
+  //   $search-bar-border-color: $base-border-color;
+  //   $search-bar-border: 1px solid $search-bar-border-color;
+  //   $search-bar-background: lighten($search-bar-border-color, 10%);
 
-    float: left;
-    padding: 0.85em 0.85em 0.7em 0.6em;
-    width: 60%;
+  //   float: left;
+  //   padding: 0.85em 0.85em 0.7em 0.6em;
+  //   width: 60%;
 
-    form {
-      position: relative;
+  //   form {
+  //     position: relative;
 
-      input[type=search] {
-        @include box-sizing(border-box);
-        background: $navigation-search-background;
-        border-radius: $base-border-radius * 2;
-        border: $navigation-search-border;
-        color: $navigation-color;
-        font-size: 0.9em;
-        font-style: italic;
-        margin: 0;
-        padding: 0.5em 0.8em;
-        width: 100%;
+  //     input[type=search] {
+  //       @include box-sizing(border-box);
+  //       background: $navigation-search-background;
+  //       border-radius: $base-border-radius * 2;
+  //       border: $navigation-search-border;
+  //       color: $navigation-color;
+  //       font-size: 0.9em;
+  //       font-style: italic;
+  //       margin: 0;
+  //       padding: 0.5em 0.8em;
+  //       width: 100%;
 
-        @include media($horizontal-bar-mode) {
-          width: 100%;
-        }
-      }
+  //       @include media($horizontal-bar-mode) {
+  //         width: 100%;
+  //       }
+  //     }
 
-      button[type=submit] {
-        background: $navigation-search-background;
-        border: none;
-        bottom: 0.3em;
-        left: auto;
-        outline: none;
-        padding: 0 9px;
-        position: absolute;
-        right: 0.3em;
-        top: 0.3em;
+  //     button[type=submit] {
+  //       background: $navigation-search-background;
+  //       border: none;
+  //       bottom: 0.3em;
+  //       left: auto;
+  //       outline: none;
+  //       padding: 0 9px;
+  //       position: absolute;
+  //       right: 0.3em;
+  //       top: 0.3em;
 
-        img {
-          height: 12px;
-          opacity: 0.7;
-          padding: 1px;
-        }
-      }
-    }
+  //       img {
+  //         height: 12px;
+  //         opacity: 0.7;
+  //         padding: 1px;
+  //       }
+  //     }
+  //   }
 
-    @include media($horizontal-bar-mode) {
-      display: inline-block;
-      position: relative;
-      width: 16em;
+//     @include media($horizontal-bar-mode) {
+//       display: inline-block;
+//       position: relative;
+//       width: 16em;
 
-      input {
-        @include box-sizing(border-box);
-        display: block;
-      }
-    }
-  }
-}
+//       input {
+//         @include box-sizing(border-box);
+//         display: block;
+//       }
+//     }
+//   }
+// }
+
 #amstel:hover { width: 150px;}
 #anchor:hover { width: 150px;}
 #banks:hover { width: 150px;}
@@ -438,7 +473,7 @@ header.navigation {
 #vsbc:hover { width: 150px; height: 350px;}
 #hb {animation-timing-function: linear;}
 
-
+#cheers {height: 400px;}
 #facebook {
   position: absolute;
   top: 15px;
@@ -446,7 +481,7 @@ header.navigation {
 }
  .beerback {
 
-    height: 275px;
+    height: 200px;
     background-image: url("beer.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -488,12 +523,7 @@ div#vslogo {
     width: 10em;
   }
 
-  //   div#gmap {
-  //   float: right;
-  // }
-  // #cheers {height: 310px;
-  //          float: left;
-  //        }
+
     //footer code//
     .footer {
   $base-spacing: 1.5em !default;
@@ -637,6 +667,7 @@ div#vslogo {
   @include reset-display();
 }
 //flash notice code
+//about page animation
 $base-spacing: 1.5em !default;
 $alert-color: #fff6bf !default;
 $error-color: #fbe3e4 !default;
@@ -677,8 +708,65 @@ $success-color: #e6efc2 !default;
 .flash-success {
   @include flash($success-color);
 }
+.hover-tile-outer {
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: em(640) !default;
+  $hover-tile-height: 10em;
+  $base-spacing: 1.5em;
+
+  background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  border: 1px solid $base-border-color;
+  cursor: pointer;
+  height: $hover-tile-height;
+  margin-bottom: $base-line-height;
+  
+  @include media($medium-screen) {
+    width: 40%;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, 0.2s ease-in-out);
+    background: inherit;
+    color: white;
+    height: inherit;
+    overflow: hidden;
+    padding: $base-spacing;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(#000, 0.5);
+
+    p {
+      color: transparentize(#fff, 0.3);
+      line-height: $base-line-height;
+    }
+
+    h4 {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
 
 
+  //   div#gmap {
+  //   float: right;
+  // }
+  // #cheers {height: 310px;
+  //          float: left;
+  //        }
 
 //.faqstyle p {background-color: blue;}
 // #fb:hover {

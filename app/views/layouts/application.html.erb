@@ -13,7 +13,33 @@
 </head>
 <body>
 <section>
-
+<div class="beerlogos">
+    <%= image_tag "amstel.jpeg", width: "50px", :id =>"amstel" %>
+    <%= image_tag "bluemoon.jpeg", width: "50px", :id =>"bluemoon" %>
+    <%= image_tag "brooklyn.jpeg", width: "50px", :id =>"brooklyn" %>
+    <%= image_tag "budlt.jpeg", width: "50px", :id =>"budlt" %>
+    <%= image_tag "bud.jpg", width: "50px", :id =>"bud" %>
+    <%= image_tag "coorslt.jpeg", width: "50px", :id =>"coorslt" %>
+    <%= image_tag "foster.jpeg", width: "50px", :id =>"foster" %>
+    <%= image_tag "weihenstephan.jpeg", width: "50px", :id =>"weihenstephan" %>
+    <%= image_tag "samadams.jpeg", width: "50px", :id =>"samadams" %>
+    <%= image_tag "miller.jpeg", width: "50px", :id =>"miller" %>
+    <%= image_tag "stella.png", width: "50px", :id =>"stella" %>
+    <%= image_tag "corona.png", width: "50px", :id =>"corona" %>
+    <%= image_tag "guinness.png", width: "50px", :id =>"guinness" %>
+    <%= image_tag "newcastle.jpeg", width: "50px", :id =>"newcastle" %>
+    <%= image_tag "pbr.jpeg", width: "50px", :id =>"pbr" %>
+    <%= image_tag "redstripe.jpeg", width: "50px", :id =>"redstripe" %>
+    <%= image_tag "peroni.jpeg", width: "50px", :id =>"peroni" %>
+    <%= image_tag "carib.jpeg", width: "50px", :id =>"carib" %>
+    <%= image_tag "banks.jpeg", width: "50px", :id =>"banks" %>
+    <%= image_tag "guinblonde.jpeg", width: "50px", :id =>"guinblonde" %>
+    <%= image_tag "rollingrock.jpeg", width: "50px", :id =>"rollingrock" %>
+    <%= image_tag "anchor.jpeg", width: "50px", :id =>"anchor" %>
+    <%= image_tag "becks.jpeg", width: "50px", :id =>"becks" %>
+    <%= image_tag "grolsch.jpeg", width: "50px", :id =>"grolsch" %>
+  
+</div>
 
 <container>
   <div class="beerback">
@@ -23,6 +49,7 @@
   <div id="beermenu">
     <a target="_blank" href="https://www.beermenus.com/places/5375-valley-stream-discount-beverage-center"><%= image_tag "beermenu.png", :id =>"fb
     ", width: "100px" %></a>
+    <h4 id="tel">516-285-5800</h4>
   </div>
   <div id="facebook">
     <a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag("facebook.jpeg", :id=>"fb", width: "100px") %></a>
@@ -41,22 +68,42 @@
         <li class="nav-link"><%= link_to 'About', home_about_path %></li>
         <li class="nav-link"><%= link_to 'Specials', home_specials_path %></li>
         <li class="nav-link"><%= link_to 'Contact', home_contact_path %></li>
-        <li class="nav-link"><%= link_to 'Faq', home_faq_path %></li>
-        <li class="nav-link"><%= link_to 'Products', home_products_path %></li>
+        <li class="nav-link"><%= link_to 'FAQ', home_faq_path %></li>
+        <li class="nav-link more"><a href="javascript:void(0)">More</a>
+          <ul class="submenu">
+           <li class="nav-link"><%= link_to 'Products', home_products_path %></li>
+
+             <li class="more"><a href="javascript:void(0)">Email Us</a>
+          <ul class="submenu">
+                <li><%= link_to 'Create Corp. Account', new_corporate_path %></li>
+               <li><%= link_to 'Request a Beer', new_request_path %></li>
+               <li><%= link_to 'Request a Delivery', new_request_path %></li>
+        </ul>
+            </li>
+            <li class="more"><a href="javascript:void(0)">Pricing</a>
+              <ul class="submenu">
+                <li><%= link_to 'Wholesale', products_path %></li>
+                <li><a target="_blank" href="https://www.beermenus.com/places/5375-valley-stream-discount-beverage-center">Retail</a></li>
+              </ul>
+            </li>
+        </li>
+          <li class="more"><a href="javascript:void(0)">Members</a>
+              <ul class="submenu">
+                <li><%= link_to 'Log in', new_user_session_path %></li>
+                <li><%= link_to 'Become One', new_user_registration_path %></li>
+              </ul>
+             
+            </li>
+          </ul>
+        </li>
+        
+        
+      
+      </ul>
+        
         </ul>
   </nav>
-
-    <!-- div class="navigation-tools">
-      <div class="search-bar">
-        <form role="search">
-          <input type="search" placeholder="Enter Search" />
-          <button type="submit">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-          </button>
-        </form>
-      </div> -->
-    </div>
-  </div>
+ </div>
 </header>
   <div id="content">
 <% if flash[:notice] %>
@@ -106,6 +153,8 @@
   <hr>
 
   <p>Disclaimer Please imbibe responsibly. Cheers!</p>
+
+              <p>Call us <b>516-285-5800</b></p>
 </footer>
 </container>
 </section>

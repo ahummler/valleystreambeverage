@@ -1,4 +1,4 @@
-<div id="corp app">
+<div id="corpapp">
 <%= form_tag corporate_email_path do |f| %>
 <p class='corp'>
 		<%= label_tag :email %>
@@ -22,7 +22,7 @@
 		<%= label_tag :owner %>
 		<%= text_field_tag :owner %>
 </p>
-		<p class='contact'><%= submit_tag 'submit', class: 'corporate_submit', data: {disable_with: "Submitting..."} %></p>
+</div>
+		<p class='submit'><%= submit_tag 'submit', class: 'corporate_submit', data: {disable_with: "Submitting..."} %></p>
 
 <% end %>
-</div>

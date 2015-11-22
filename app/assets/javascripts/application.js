@@ -53,6 +53,36 @@ $(document).on('page:change', function() {
 	  });
 	});
 });
+$(document).ready(function(){
+
+	$("#cheers").css("opacity", 0);
+
+	$(window).scroll(function(){
+
+		var windowHeight = $(window).height();
+		var windowScrollPosTop = $(window).scrollTop();
+		var windowScrollPosBottom= windowHeight +
+		windowScrollPosTop;
+		var objectOffset = $("#cheers").offset();
+		var objectOffsetTop = objectOffset.top;
+
+		
+		if (!$("cheers").hasClass("animation-complete")){
+
+			if(windowScrollPosBottom > objectOffsetTop){
+			$("#cheers").animate({"opacity" : 1},
+			 3000).addClass("animation-complete");
+		}
+		}
+	
+
+});
+});
+$(document).ready(function(){
+	$(".beerlogos").css({'position':'absolute'})
+	$(".beerlogos").animate({'left':'3000px'},60000, 'linear')
+	
+});
 // $(document).on('page:change', function()
 //   var menuToggle = $('#js-mobile-menu').unbind();
 //   $('#js-navigation-menu').removeClass("show");

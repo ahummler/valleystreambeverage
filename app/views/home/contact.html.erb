@@ -1,30 +1,30 @@
-<div class="contact">
+<div id="suggestion">
 
 
-<h1>Contact Us</h1>
+<h1>Suggestions</h1>
 <p>
 	<%= form_tag home_email_path, method: :post do  %> 
 
 <p class="contact">
-<%= label_tag  :name, "name" %>
-<%= text_field_tag :name, nil, :placeholder=>"name" %>
+<%= label_tag  :name, "Name" %>
+<%= text_field_tag :name %>
 </p>
 <p class="contact">
 <%= label_tag :email, "Email" %>
-<%= email_field_tag :email, nil, :placeholder=>"Email" %>
+<%= email_field_tag :email %>
 </p>
 <p class="contact">
 <%= label :comments, "Comments" %>
-<%= text_area_tag :comments, nil, placeholder:"Comments" %>
+<%= text_area_tag :comments %>
 </p>
 <p class="contact">
 <%= label_tag :phone, "Phone" %>
-<%= text_field_tag :phone, nil,  placeholder:"Phone" %>
+<%= text_field_tag :phone %>
 </p>
 
-	<p class='contact'><%= submit_tag 'submit', class: 'email_submit', data: {disable_with: "Submitting..."} %></p>
+	<p><%= submit_tag 'submit', class: 'email_submit', data: {disable_with: "Submitting..."} %></p>
 <% end %>
 </p>
-
+</div>
 
 
