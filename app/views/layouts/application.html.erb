@@ -14,23 +14,23 @@
 <body>
 <section>
 <div class="beerlogos">
-    <%= image_tag "amstel.jpeg", width: "50px", :id =>"amstel" %>
-    <%= image_tag "bluemoon.jpeg", width: "50px", :id =>"bluemoon" %>
-    <%= image_tag "brooklyn.jpeg", width: "50px", :id =>"brooklyn" %>
+    <%= image_tag "amstel2.png", width: "50px", :id =>"amstel" %>
+    <%= image_tag "bluemoon.png", width: "50px", :id =>"bluemoon" %>
+    <%= image_tag "brooklyn.png", width: "50px", :id =>"brooklyn" %>
     <%= image_tag "budlt.jpeg", width: "50px", :id =>"budlt" %>
-    <%= image_tag "bud.jpg", width: "50px", :id =>"bud" %>
-    <%= image_tag "coorslt.jpeg", width: "50px", :id =>"coorslt" %>
-    <%= image_tag "foster.jpeg", width: "50px", :id =>"foster" %>
+    <%= image_tag "bud.jpeg", width: "50px", :id =>"bud" %>
+    <%= image_tag "coorslt.png", width: "50px", :id =>"coorslt" %>
+    <%= image_tag "foster.png", width: "50px", :id =>"foster" %>
     <%= image_tag "weihenstephan.jpeg", width: "50px", :id =>"weihenstephan" %>
-    <%= image_tag "samadams.jpeg", width: "50px", :id =>"samadams" %>
-    <%= image_tag "miller.jpeg", width: "50px", :id =>"miller" %>
+    <%= image_tag "samadams.png", width: "50px", :id =>"samadams" %>
+    <%= image_tag "miller.png", width: "50px", :id =>"miller" %>
     <%= image_tag "stella.png", width: "50px", :id =>"stella" %>
     <%= image_tag "corona.png", width: "50px", :id =>"corona" %>
     <%= image_tag "guinness.png", width: "50px", :id =>"guinness" %>
     <%= image_tag "newcastle.jpeg", width: "50px", :id =>"newcastle" %>
     <%= image_tag "pbr.jpeg", width: "50px", :id =>"pbr" %>
-    <%= image_tag "redstripe.jpeg", width: "50px", :id =>"redstripe" %>
-    <%= image_tag "peroni.jpeg", width: "50px", :id =>"peroni" %>
+    <%= image_tag "redstripe.png", width: "50px", :id =>"redstripe" %>
+    <%= image_tag "peroni.png", width: "50px", :id =>"peroni" %>
     <%= image_tag "carib.jpeg", width: "50px", :id =>"carib" %>
     <%= image_tag "banks.jpeg", width: "50px", :id =>"banks" %>
     <%= image_tag "guinblonde.jpeg", width: "50px", :id =>"guinblonde" %>
@@ -54,7 +54,13 @@
   <div id="facebook">
     <a target="_blank" href="https://www.facebook.com/Valley-Stream-Discount-Beverage-Center-261336663979956/?fref=ts"><%= image_tag("facebook.jpeg", :id=>"fb", width: "100px") %></a>
   </div>
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 
+<% end %>
 
 
   <div class="navigation-wrapper">

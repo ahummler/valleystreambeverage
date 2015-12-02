@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def import
   	Product.import(params[:file])
-  	redirect_to products_index_path, notice: "Fountain of Knowledge has been imported"
+  	redirect_to products_path, notice: "Fountain of Knowledge has been imported"
   end
 
   def order

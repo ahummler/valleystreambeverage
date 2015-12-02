@@ -53,7 +53,7 @@ $(document).on('page:change', function() {
 	  });
 	});
 });
-$(document).ready(function(){
+$(document).on('page:change', function(){
 
 	$("#cheers").css("opacity", 0);
 
@@ -67,7 +67,7 @@ $(document).ready(function(){
 		var objectOffsetTop = objectOffset.top;
 
 		
-		if (!$("cheers").hasClass("animation-complete")){
+		if (!$("#cheers").hasClass("animation-complete")){
 
 			if(windowScrollPosBottom > objectOffsetTop){
 			$("#cheers").animate({"opacity" : 1},
@@ -78,9 +78,34 @@ $(document).ready(function(){
 
 });
 });
+// $(document).ready(function(){
+
+// 	$("#products").css("opacity", 0);
+
+// 	$(window).scroll(function(){
+
+// 		var windowHeight = $(window).height();
+// 		var windowScrollPosTop = $(window).scrollTop();
+// 		var windowScrollPosBottom= windowHeight +
+// 		windowScrollPosTop;
+// 		var objectOffset = $("#products").offset();
+// 		var objectOffsetTop = objectOffset.top;
+
+		
+// 		if (!$("#products").hasClass("animation-complete")){
+
+// 			if(windowScrollPosBottom > objectOffsetTop){
+// 			$("#products").animate({"opacity" : 1},
+// 			 3000).addClass("animation-complete");
+// 		}
+// 		}
+	
+
+// });
+// });
 $(document).ready(function(){
 	$(".beerlogos").css({'position':'absolute'})
-	$(".beerlogos").animate({'left':'3000px'},60000, 'linear')
+	$(".beerlogos").animate({'left':'3000px'},80000, 'linear')
 	
 });
 // $(document).on('page:change', function()
